@@ -28,13 +28,48 @@
 
         <div id="content" >
           <span id="title">Kerk Day</span>
-<span id="subtitle"><p>Web Development, Freelance Design</p>
+<span id="subtitle" style="margin: 0;"><p>Web Development, Freelance Design</p>
 </span>
 <hr>
 
 <h1>Latest Posts</h1>
 
-    <h2><a href="/2020/11/01/website-made-with-jekyll.html">This Website Was Made With Jekyll</a></h2>
+    <div class="post-item">
+        <a href="/2020/11/01/website-made-with-jekyll.html">This Website Was Made With Jekyll</a>
+        <i>November  1, 2020</i>
+    </div>
+
+<h1>Codepens</h1>
+
+    <div class="pens-item">
+        <div>
+            <img src="/assets/img/codepens/scss-3d-buttons.JPG">
+        </div>
+        <div style="margin: 1em;">
+            <a href="https://codepen.io/kerkday/pen/GRZoYGx">SCSS 3D Buttons</a>
+            <i>I wanted to create buttons for a project, so I created an SCSS mixin to quickly create buttons of any color.</i>
+        </div>
+    </div>
+
+    <div class="pens-item">
+        <div>
+            <img src="/assets/img/codepens/pixel-borders.jpg">
+        </div>
+        <div style="margin: 1em;">
+            <a href="https://codepen.io/kerkday/pen/GRqoVxx">Pixelated CSS Borders</a>
+            <i>I was surprised at the complexity of creating image borders, so I tried to do something unique with them.</i>
+        </div>
+    </div>
+
+    <div class="pens-item">
+        <div>
+            <img src="/assets/img/codepens/example-site.jpg">
+        </div>
+        <div style="margin: 1em;">
+            <a href="https://codepen.io/kerkday/pen/bGpjrRa">Example Site</a>
+            <i>A proposal for the look and feel of a clients website. The final product looks a little different, but still maintains many things from this example.</i>
+        </div>
+    </div>
 
 
         </div>
@@ -49,24 +84,34 @@
 </div>
 <div class="right">
   <h1><a href="/">Kerk Day</a></h1>
-  <span>
+  <div id="nav">
+    
+    <a href="/">Blog</a>
+      
     
     <a href="/about/">About</a>
       
-      <br><a href="/about/friends/"> &rArr; Friends</a>
+    
+    <a href="/about/friends/">Friends</a>
       
     
-  </span>
+  </div>
 </div>
+
       </div>
     </div>
     <div id="social">
+  <i class="fas fa-comment" id="socials-button"></i>
   <a href="https://github.com/KerkDay" class="fab fa-github-square"></a>
-  <a href="https://twitter.com/KerkDay" class="fab fa-twitter-square"></a>
   <a href="https://www.instagram.com/mrkerkday/" class="fab fa-instagram-square"></a>
   <a href="https://www.linkedin.com/in/kerkday/" class="fab fa-linkedin"></a>
 </div>
-
+<script>
+  let socials = document.getElementById("socials-button");
+  socials.addEventListener("click", function() {
+    document.getElementById("social").classList.toggle("socials-open");
+  })
+</script>
 
 
     <!-- Functionality -->

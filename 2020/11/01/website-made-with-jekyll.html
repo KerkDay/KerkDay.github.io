@@ -30,7 +30,7 @@
           <h1>This Website Was Made With Jekyll</h1>
 <h2 id="-the-challenge">🏇 The Challenge</h2>
 <p>Right before graduating from my two year degree in <a href="https://www.sait.ca/programs-and-courses/diplomas/information-technology">Software Development</a>, I cobbled together a static website using HTML, CSS, and JavaScript. It was fun to do, and looked quite nice; but it was a major pain to update.<br />
-To update the website, it would be the process of adding the new page, then associating every other page with that page. I simplified it a little by using AJAX and JSON data, but it was still a frustrating process to update.</p>
+To update the website, it would be the process of adding the new page, then associating every other page with that page. I simplified it a little by using AJAX and JSON data, but it was still a frustrating process.</p>
 
 <p>That’s why I switched my personal website over to <a href="https://jekyllrb.com/">Jekyll</a>.<br />
 Jekyll is a blog platform that uses Ruby to set up a static blog. Set up a local instance of your blog, make changes, then upload the finished product elsewhere. Adding posts to the blog is as simple as making a new <a href="https://www.markdownguide.org/">Markdown</a> file for your new post, and Jekyll takes care of the rest; Jekyll adds the post to your website as a <code class="language-plaintext highlighter-rouge">.html</code> file, connects it as needed to other pages, and adds the post to an RSS feed.</p>
@@ -63,24 +63,34 @@ Recently, I’ve been working with a not-for-profit to make a community website,
 </div>
 <div class="right">
   <h1><a href="/">Kerk Day</a></h1>
-  <span>
+  <div id="nav">
+    
+    <a href="/">Blog</a>
+      
     
     <a href="/about/">About</a>
       
-      <br><a href="/about/friends/"> &rArr; Friends</a>
+    
+    <a href="/about/friends/">Friends</a>
       
     
-  </span>
+  </div>
 </div>
+
       </div>
     </div>
     <div id="social">
+  <i class="fas fa-comment" id="socials-button"></i>
   <a href="https://github.com/KerkDay" class="fab fa-github-square"></a>
-  <a href="https://twitter.com/KerkDay" class="fab fa-twitter-square"></a>
   <a href="https://www.instagram.com/mrkerkday/" class="fab fa-instagram-square"></a>
   <a href="https://www.linkedin.com/in/kerkday/" class="fab fa-linkedin"></a>
 </div>
-
+<script>
+  let socials = document.getElementById("socials-button");
+  socials.addEventListener("click", function() {
+    document.getElementById("social").classList.toggle("socials-open");
+  })
+</script>
 
 
     <!-- Functionality -->

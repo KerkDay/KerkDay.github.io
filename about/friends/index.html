@@ -41,7 +41,7 @@
         
 
         <div id="content" >
-          <h1>Friends</h1>
+          <h1>👥 Friends</h1>
 <p>
   I've had the pleasure of working with some wonderful people, whether as a small role or a large one.
   That's why I'd like to give a shoutout to these amazing people!
@@ -59,17 +59,17 @@
     <!-- Social Icons -->
     <div>
     
-      <a href="https://twitter.com/WorldAtNightPC" class="fab fa-twitter"> Twitter</a>
+      <a href="https://twitter.com/WorldAtNightPC" class="fab fa-twitter" target="_blank"> Twitter</a>
     
-      <a href="https://www.facebook.com/theworldatnightpodcast" class="fab fa-facebook"> Facebook</a>
+      <a href="https://www.facebook.com/theworldatnightpodcast" class="fab fa-facebook" target="_blank"> Facebook</a>
     
-      <a href="https://www.instagram.com/theworldatnightpodcast/" class="fab fa-instagram"> Instagram</a>
+      <a href="https://www.instagram.com/theworldatnightpodcast/" class="fab fa-instagram" target="_blank"> Instagram</a>
     
-      <a href="https://open.spotify.com/show/3fZOJj9C2OteY4LhwNuLAU?si=XXIcKsjGQ2aN88z16IrEsg" class="fab fa-spotify"> Listen on Spotify</a>
+      <a href="https://open.spotify.com/show/3fZOJj9C2OteY4LhwNuLAU?si=XXIcKsjGQ2aN88z16IrEsg" class="fab fa-spotify" target="_blank"> Listen on Spotify</a>
     
-      <a href="https://www.stitcher.com/podcast/the-world-at-night-podcast" class="fa fa-podcast"> Listen on Stitcher</a>
+      <a href="https://www.stitcher.com/podcast/the-world-at-night-podcast" class="fa fa-podcast" target="_blank"> Listen on Stitcher</a>
     
-      <a href="https://podcasts.apple.com/us/podcast/the-world-at-night-podcast/id1537497926?itsct=podcast_box&itscg=30200" class="fab fa-apple"> Listen on Apple Podcasts</a>
+      <a href="https://podcasts.apple.com/us/podcast/the-world-at-night-podcast/id1537497926?itsct=podcast_box&itscg=30200" class="fab fa-apple" target="_blank"> Listen on Apple Podcasts</a>
     
     </div>
   </div>
@@ -88,13 +88,13 @@
     <!-- Social Icons -->
     <div>
     
-      <a href="https://albearta.org" class="fas fa-globe"> Website</a>
+      <a href="https://albearta.org" class="fas fa-globe" target="_blank"> Website</a>
     
-      <a href="https://www.facebook.com/groups/albearta/" class="fab fa-facebook"> Facebook</a>
+      <a href="https://www.facebook.com/groups/albearta/" class="fab fa-facebook" target="_blank"> Facebook</a>
     
-      <a href="https://twitter.com/alBEARta" class="fab fa-twitter"> Twitter</a>
+      <a href="https://twitter.com/alBEARta" class="fab fa-twitter" target="_blank"> Twitter</a>
     
-      <a href="https://www.instagram.com/fabalbearta/" class="fab fa-instagram"> Instagram</a>
+      <a href="https://www.instagram.com/fabalbearta/" class="fab fa-instagram" target="_blank"> Instagram</a>
     
     </div>
   </div>
@@ -114,24 +114,34 @@
 </div>
 <div class="right">
   <h1><a href="/">Kerk Day</a></h1>
-  <span>
+  <div id="nav">
+    
+    <a href="/">Blog</a>
+      
     
     <a href="/about/">About</a>
       
-      <br><a href="/about/friends/"> &rArr; Friends</a>
+    
+    <a href="/about/friends/">Friends</a>
       
     
-  </span>
+  </div>
 </div>
+
       </div>
     </div>
     <div id="social">
+  <i class="fas fa-comment" id="socials-button"></i>
   <a href="https://github.com/KerkDay" class="fab fa-github-square"></a>
-  <a href="https://twitter.com/KerkDay" class="fab fa-twitter-square"></a>
   <a href="https://www.instagram.com/mrkerkday/" class="fab fa-instagram-square"></a>
   <a href="https://www.linkedin.com/in/kerkday/" class="fab fa-linkedin"></a>
 </div>
-
+<script>
+  let socials = document.getElementById("socials-button");
+  socials.addEventListener("click", function() {
+    document.getElementById("social").classList.toggle("socials-open");
+  })
+</script>
 
 
     <!-- Functionality -->

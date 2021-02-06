@@ -43,24 +43,34 @@
 </div>
 <div class="right">
   <h1><a href="/">Kerk Day</a></h1>
-  <span>
+  <div id="nav">
+    
+    <a href="/">Blog</a>
+      
     
     <a href="/about/">About</a>
       
-      <br><a href="/about/friends/"> &rArr; Friends</a>
+    
+    <a href="/about/friends/">Friends</a>
       
     
-  </span>
+  </div>
 </div>
+
       </div>
     </div>
     <div id="social">
+  <i class="fas fa-comment" id="socials-button"></i>
   <a href="https://github.com/KerkDay" class="fab fa-github-square"></a>
-  <a href="https://twitter.com/KerkDay" class="fab fa-twitter-square"></a>
   <a href="https://www.instagram.com/mrkerkday/" class="fab fa-instagram-square"></a>
   <a href="https://www.linkedin.com/in/kerkday/" class="fab fa-linkedin"></a>
 </div>
-
+<script>
+  let socials = document.getElementById("socials-button");
+  socials.addEventListener("click", function() {
+    document.getElementById("social").classList.toggle("socials-open");
+  })
+</script>
 
 
     <!-- Functionality -->

@@ -3439,7 +3439,7 @@ html, body { font-family: "Lato", serif; font-size: 18px; overflow: hidden; }
 a { color: var(--darkgreen); font-weight: bold; }
 a:hover { color: var(--lightgreen); }
 
-h1, h2, h3, h4, h5, h6 { margin-top: 0; }
+h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: .2em; }
 
 .highlight { margin: 0; }
 
@@ -3447,16 +3447,16 @@ h1, h2, h3, h4, h5, h6 { margin-top: 0; }
 
 code.language-plaintext { background: #625565; border-radius: 5px; padding: 2px 5px; }
 
-#main { position: absolute; display: flex; flex-direction: column; bottom: 0; right: 0; top: 0; left: 0; justify-content: space-between; background: #2e222f; background-image: url("https://images.unsplash.com/photo-1509114397022-ed747cca3f65"); background-size: cover; background-position: center; padding-top: 20px; }
+#main { position: absolute; display: flex; flex-direction: column; bottom: 0; right: 0; top: 0; left: 0; justify-content: space-between; background: #2e222f; background-image: url("https://images.unsplash.com/photo-1493130952181-47e36589f64d?w=1920"); background-size: cover; background-position: center; padding-top: 20px; }
 
 #header { background: var(--darkgreen); display: flex; padding-top: 10px; justify-content: center; color: var(--lightgreen); box-shadow: -10px -20px 40px rgba(0, 0, 0, 0.1), -5px -20px 30px rgba(0, 0, 0, 0.1), 0 -20px 20px rgba(0, 0, 0, 0.1), 5px -20px 30px rgba(0, 0, 0, 0.1), 10px -20px 40px rgba(0, 0, 0, 0.1); }
 #header .left { position: relative; pointer-events: none; }
-#header .left img { position: relative; display: block; bottom: 0; }
+#header .left img { position: relative; display: block; bottom: 0; height: 20vh; }
 #header .left #speech { position: absolute; left: 50%; top: -40px; transform-origin: 50% 100%; transform: scale(0.5, 1) skewX(-200deg); height: 80px; }
-#header .right { display: flex; flex-direction: column; margin-left: -40px; }
+#header .right { display: flex; flex-direction: column; z-index: 2; }
 #header .right a { color: var(--lightgreen); text-decoration: none; font-weight: bolder; }
 
-#bubble { position: relative; margin: auto auto 20px auto; max-width: 900px; min-width: 50%; height: 100%; background: white; padding: 20px; border-radius: 40px; border: 20px solid white; }
+#bubble { position: relative; margin: auto auto 20px auto; max-width: 98vw; width: 900px; min-width: 50%; height: 100%; background: white; padding: 20px; border-radius: 40px; border: 20px solid white; box-sizing: border-box; }
 #bubble #content { overflow: auto; position: absolute; bottom: 0; right: 0; top: 0; left: 0; border-radius: 20px; padding: 5px; scrollbar-width: thin; scrollbar-color: var(--lightgreen) var(--trans); }
 #bubble #content::-webkit-scrollbar { background-color: var(--trans); width: 10px; }
 #bubble #content::-webkit-scrollbar-track { background: var(--trans); }
@@ -3468,9 +3468,11 @@ code.language-plaintext { background: #625565; border-radius: 5px; padding: 2px 
 #title { text-align: center; font-weight: 900; font-size: 5rem; display: block; }
 
 #subtitle { text-align: center; font-weight: 700; font-size: 2.5rem; display: block; }
+#subtitle p { margin: 0; }
 
 #social { position: absolute; z-index: 2; bottom: 0; left: 0; font-size: 2.5rem; padding: 10px 20px; }
-#social a { color: white; }
+#social a { color: white; text-decoration: none; }
+#social i { display: none; }
 
 .card { position: relative; margin: 20px 0 0 20px; background: var(--darkgreen); color: white; border-radius: 10px; min-height: 240px; }
 .card img.card-img { position: absolute; border-radius: 10px; left: -20px; top: 20px; bottom: 20px; width: 200px; }
@@ -3478,9 +3480,16 @@ code.language-plaintext { background: #625565; border-radius: 5px; padding: 2px 
 .card .card-content a { background: var(--lightgreen); color: black; font-weight: bold; padding: 5px; border-radius: 10px; text-decoration: none; margin: 5px 5px 0 0; }
 .card .card-content a:hover { background: white; }
 
-@media screen and (max-width: 600px) { #header .left img { max-width: 70%; }
-  #header .left #speech { left: 35%; }
-  #header .right { position: relative; z-index: 2; margin-left: -130px; justify-content: space-between; margin-right: 20px; min-width: 120px; }
+.post-item, .pens-item { margin: .5em 0; }
+.post-item a, .post-item i, .pens-item a, .pens-item i { display: block; }
+.post-item a, .pens-item a { font-size: 1.5em; }
+
+.pens-item { display: flex; flex-direction: row; box-shadow: 0 0.5em 0.5em -0.25em rgba(0, 0, 0, 0.15); }
+.pens-item img { width: 7em; height: 7em; object-fit: cover; display: block; border-radius: .3em; }
+
+@media screen and (max-width: 600px) { #header .left img { margin-right: 30vw; }
+  #header .left #speech { left: 25%; }
+  #header .right { position: relative; z-index: 2; margin-left: -25vw; justify-content: space-between; margin-right: 20px; min-width: 120px; }
   #header .right h1 { display: none; }
   #header .right a { font-size: 1.5rem; }
   #bubble { box-sizing: border-box; max-width: 95%; min-width: 95%; border-radius: 20px; border: 10px solid white; }
@@ -3490,8 +3499,18 @@ code.language-plaintext { background: #625565; border-radius: 5px; padding: 2px 
   .card { margin: 40px 0 0 0; min-height: none; }
   .card img.card-img { position: relative; border-radius: 10px; left: 50%; transform: translate(-50%, 0); top: -20px; width: 300px; }
   .card .card-content { margin-left: 0; margin-top: -25px; overflow: auto; }
-  #social { background: rgba(0, 0, 0, 0.75); font-size: 1.75rem; padding: 5px 5px; border-radius: 0 20px 0 0; }
-  #social a { margin: 5px; } }
+  #social { background: rgba(0, 0, 0, 0.75); font-size: 1.75rem; padding: .25em .35em 0 .25em; border-radius: 0 20px 0 0; transition: all .2s; }
+  #social a { margin-left: .25em; display: none; transition: all .2s; }
+  #social i { display: initial; color: white; }
+  #social.socials-open a { display: initial; }
+  #social.socials-open i { -webkit-animation: rotate-center 0.6s ease-in-out both; animation: rotate-center 0.6s ease-in-out both; }
+  .pens-item { flex-direction: column; align-items: center; } }
+@-webkit-keyframes rotate-center { 0% { -webkit-transform: rotate(0); transform: rotate(0); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+@keyframes rotate-center { 0% { -webkit-transform: rotate(0); transform: rotate(0); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+#nav a { display: block; }
+
 .fas, .fa { font-family: 'Font Awesome 5 Free', 'Lato'; }
 
 .fab { font-family: 'Font Awesome 5 Brands', 'Lato'; }
